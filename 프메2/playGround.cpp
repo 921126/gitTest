@@ -134,6 +134,7 @@ HRESULT playGround::init()
 
 		//선택
 		IMAGEMANAGER->addImage("선택중", L"image/ui/UI_select.png", 168, 30);
+		IMAGEMANAGER->addImage("선택중2", L"image/ui/UI_select02.png", 98, 25);
 	}
 
 	FRAMEMANAGER->addFrame("테스트1", 100, 100, 10, 10);
