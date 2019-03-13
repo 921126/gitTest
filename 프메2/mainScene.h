@@ -6,6 +6,7 @@ class mainScene : public gameNode
 {
 private:
 
+	int _healtyState;
 	bool _ismainScene;
 
 public:
@@ -17,5 +18,7 @@ public:
 	void update();
 	void render();
 
+
+	void healthyStateRender();
 };
 

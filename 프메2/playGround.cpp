@@ -55,15 +55,18 @@ HRESULT playGround::init()
 			IMAGEMANAGER->addImage("상태창", L"image/ui/UI_common_state.png", 200, 218);
 			IMAGEMANAGER->addFrameImage("선택창", L"image/ui/UI_common_select.png", 400, 120, 2, 1);
 
-			//1-1. 상점리스트 
+			//1-3. 건강관리
+			{
+				IMAGEMANAGER->addImage("큐브01", L"image/face/cube_face01.png", 140, 144);
+			}
+			//1-5. 상점리스트 
 			{
 				IMAGEMANAGER->addFrameImage("상점목록", L"image/icon/icon_shoplist.png", 240, 40, 6, 1);
-			}
+			} 
 			//1-6. 성 방문
 			{
 				IMAGEMANAGER->addImage("성이미지", L"image/ui/UI_castle.png", 290, 181);
-
-				IMAGEMANAGER->addImage("문지기", L"image/face/UI_face_01.png", 140, 144);
+				IMAGEMANAGER->addFrameImage("성사람들", L"image/face/visit_face.png", 1400, 144, 10, 1);
 			}
 		}
 		//2. 캐릭터

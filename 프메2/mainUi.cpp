@@ -61,7 +61,9 @@ void mainUi::update()
 		{
 			if (KEYMANAGER->isOnceKeyDown(VK_LBUTTON))
 			{
-				_mState = M_SELECT_DIETMANAGEMENT;
+				_mState = M_SELECT_HEALTH_CARE;
+				UIMANAGER->selectUI(UI_HEALTH_CARE);
+				UIMANAGER->selectBeforUI(UI_MAIN);
 			}
 		}
 		if (PtInD2D1Rect(_selectBox[3], _ptMouse))
@@ -115,7 +117,4 @@ void mainUi::update()
 void mainUi::render()
 {
 	IMAGEMANAGER->render("º±≈√√¢", 600, 218);
-	if (_mState == M_SELECT_NONE)
-	{
-	}
 }

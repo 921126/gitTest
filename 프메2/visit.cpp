@@ -66,6 +66,7 @@ void visit::update()
 			if (KEYMANAGER->isOnceKeyDown(VK_LBUTTON))
 			{
 				_vState = V_SELECT_KNIGHT;
+				_isVisit = false;
 			}
 		}
 		else if (PtInD2D1Rect(_selectRc[2], _ptMouse))
@@ -74,6 +75,7 @@ void visit::update()
 			if (KEYMANAGER->isOnceKeyDown(VK_LBUTTON))
 			{
 				_vState = V_SELECT_GENERAL;
+				_isVisit = false;
 			}
 		}
 		else if (PtInD2D1Rect(_selectRc[3], _ptMouse))
@@ -82,6 +84,7 @@ void visit::update()
 			if (KEYMANAGER->isOnceKeyDown(VK_LBUTTON))
 			{
 				_vState = V_SELECT_MINISTER;
+				_isVisit = false;
 			}
 		}
 		else if (PtInD2D1Rect(_selectRc[4], _ptMouse))
@@ -90,6 +93,7 @@ void visit::update()
 			if (KEYMANAGER->isOnceKeyDown(VK_LBUTTON))
 			{
 				_vState = V_SELECT_BISHOP;
+				_isVisit = false;
 			}
 		}
 		else if (PtInD2D1Rect(_selectRc[5], _ptMouse))
@@ -98,6 +102,7 @@ void visit::update()
 			if (KEYMANAGER->isOnceKeyDown(VK_LBUTTON))
 			{
 				_vState = V_SELECT_CONCUBINE;
+				_isVisit = false;
 			}
 		}
 		else if (PtInD2D1Rect(_selectRc[6], _ptMouse))
@@ -106,6 +111,7 @@ void visit::update()
 			if (KEYMANAGER->isOnceKeyDown(VK_LBUTTON))
 			{
 				_vState = V_SELECT_QUEEN;
+				_isVisit = false;
 			}
 		}
 		else if (PtInD2D1Rect(_selectRc[7], _ptMouse))
@@ -114,6 +120,7 @@ void visit::update()
 			if (KEYMANAGER->isOnceKeyDown(VK_LBUTTON))
 			{
 				_vState = V_SELECT_KING;
+				_isVisit = false;
 			}
 		}
 		else if (PtInD2D1Rect(_selectRc[8], _ptMouse))
@@ -122,6 +129,7 @@ void visit::update()
 			if (KEYMANAGER->isOnceKeyDown(VK_LBUTTON))
 			{
 				_vState = V_SELECT_CLOWN;
+				_isVisit = false;
 			}
 		}
 		else if (PtInD2D1Rect(_selectRc[9], _ptMouse))
@@ -130,6 +138,7 @@ void visit::update()
 			if (KEYMANAGER->isOnceKeyDown(VK_LBUTTON))
 			{
 				_vState = V_SELECT_PRINCE;
+				_isVisit = false;
 			}
 		}
 		else
@@ -179,7 +188,7 @@ void visit::render()
 	{
 		FRAMEMANAGER->findMenuFrame("방문하기")->render("선택박스");
 		FRAMEMANAGER->findMenuFrame("성방문02")->render("텍스트박스");
-		IMAGEMANAGER->findImage("문지기")->render( 60, 370);
+		IMAGEMANAGER->findImage("성사람들")->frameRender( 60, 370, 0, 0);
 		swprintf_s(visit, L"왔구나. \n이번엔 누구를 만나려는 거냐?");
 		D2DMANAGER->drawText(visit, 210, 380, 18, RGB(255, 255, 255));
 
@@ -244,27 +253,47 @@ void visit::render()
 	{
 	case V_SELECT_GUARD:
 		FRAMEMANAGER->findMenuFrame("성방문03")->render("텍스트박스");
-		IMAGEMANAGER->findImage("문지기")->render(60, 370);
-		swprintf_s(visit, L"왔구나. \n이번엔 누구를 만나려는 거냐?");
-		D2DMANAGER->drawText(visit, 210, 380, 18, RGB(255, 255, 255));
+		IMAGEMANAGER->findImage("성사람들")->frameRender(110, 370, 0, 0);
+		swprintf_s(visit, L"나 같은 녀석하고 친해져봐야\n별 볼일 없을텐데");
+		D2DMANAGER->drawText(visit, 260, 380, 18, RGB(255, 255, 255));
 		break;
 	case V_SELECT_KNIGHT:
+		FRAMEMANAGER->findMenuFrame("성방문03")->render("텍스트박스");
+		IMAGEMANAGER->findImage("성사람들")->frameRender(110, 370, 1, 0);
+		swprintf_s(visit, L"응? 누가 나를 만나고 싶어한다고?");
+		D2DMANAGER->drawText(visit, 260, 380, 18, RGB(255, 255, 255));
 		break;
 	case V_SELECT_GENERAL:
+		FRAMEMANAGER->findMenuFrame("성방문03")->render("텍스트박스");
+		IMAGEMANAGER->findImage("성사람들")->frameRender(110, 370, 2, 0);
 		break;
 	case V_SELECT_MINISTER:
+		FRAMEMANAGER->findMenuFrame("성방문03")->render("텍스트박스");
+		IMAGEMANAGER->findImage("성사람들")->frameRender(110, 370, 3, 0);
 		break;
 	case V_SELECT_BISHOP:
+		FRAMEMANAGER->findMenuFrame("성방문03")->render("텍스트박스");
+		IMAGEMANAGER->findImage("성사람들")->frameRender(110, 370, 4, 0);
 		break;
 	case V_SELECT_CONCUBINE:
+		FRAMEMANAGER->findMenuFrame("성방문03")->render("텍스트박스");
+		IMAGEMANAGER->findImage("성사람들")->frameRender(110, 370, 5, 0);
 		break;
 	case V_SELECT_QUEEN:
+		FRAMEMANAGER->findMenuFrame("성방문03")->render("텍스트박스");
+		IMAGEMANAGER->findImage("성사람들")->frameRender(110, 370, 6, 0);
 		break;
 	case V_SELECT_KING:
+		FRAMEMANAGER->findMenuFrame("성방문03")->render("텍스트박스");
+		IMAGEMANAGER->findImage("성사람들")->frameRender(110, 370, 7, 0);
 		break;
 	case V_SELECT_CLOWN:
+		FRAMEMANAGER->findMenuFrame("성방문03")->render("텍스트박스");
+		IMAGEMANAGER->findImage("성사람들")->frameRender(110, 370, 8, 0);
 		break;
 	case V_SELECT_PRINCE:
+		FRAMEMANAGER->findMenuFrame("성방문03")->render("텍스트박스");
+		IMAGEMANAGER->findImage("성사람들")->frameRender(110, 370, 9, 0);
 		break;
 	}
 

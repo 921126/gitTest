@@ -1,2 +1,10 @@
-﻿  visit.cpp
-  windowsAPI.vcxproj -> C:\Users\hayoung\Desktop\gitTest\프메2\x64\Debug\windowsAPI.exe
+﻿  mainScene.cpp
+  playGround.cpp
+c:\users\nabom\onedrive\desktop\team15ductproject\gittest\프메2\tilenode.h(87): warning C4091: 'typedef ': 변수를 선언하지 않으면 'tagTile' 왼쪽은 무시됩니다.
+c:\users\nabom\onedrive\desktop\team15ductproject\gittest\프메2\playground.cpp(191): warning C4477: 'swprintf_s' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double'입니다.
+c:\users\nabom\onedrive\desktop\team15ductproject\gittest\프메2\playground.cpp(193): warning C4477: 'swprintf_s' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double'입니다.
+  windowsAPI.cpp
+c:\users\nabom\onedrive\desktop\team15ductproject\gittest\프메2\tilenode.h(87): warning C4091: 'typedef ': 변수를 선언하지 않으면 'tagTile' 왼쪽은 무시됩니다.
+c:\users\nabom\onedrive\desktop\team15ductproject\gittest\프메2\windowsapi.cpp(85): warning C4244: 'return': 'WPARAM'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  windowsAPI.vcxproj -> C:\Users\nabom\OneDrive\Desktop\team15ductProject\gitTest\프메2\x64\Debug\windowsAPI.exe

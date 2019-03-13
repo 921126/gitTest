@@ -7,6 +7,7 @@
 
 #include "mainUi.h"
 #include "talk.h"
+#include "healthCare.h"
 #include "shopList.h"
 #include "visit.h"
 
@@ -49,7 +50,7 @@ public:
 	void selectUI(UI_TYPE type) { _currentUI = type; }
 	void selectBeforUI(UI_TYPE type) { _beforeUI = type; }
 	map<UI_TYPE, baseUi*> getUiMap() { return _uiMap; }
-
+	HEALTH_BASICS getHealthState() { return (HEALTH_BASICS)_uiMap.find(UI_HEALTH_CARE)->second->getHealthState(); }
 
 };
 

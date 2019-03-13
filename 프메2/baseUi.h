@@ -17,5 +17,8 @@ public:
 	virtual void uiClose();
 
 	virtual void uiInfoSet();
+
+	virtual int getHealthState();
+
 };
 

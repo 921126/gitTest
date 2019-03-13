@@ -27,6 +27,12 @@ HRESULT uiManager::init()
 			talkScene->init();
 			_uiMap.insert(make_pair(UI_TALK, talkScene));
 		}
+		//01-03. 건강관리
+		{
+			healthCare* healthCareScene = new healthCare;
+			healthCareScene->init();
+			_uiMap.insert(make_pair(UI_HEALTH_CARE, healthCareScene));
+		}
 		//01-05. 상점
 		{
 			shopList* shopListScene = new shopList;

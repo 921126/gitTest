@@ -37,3 +37,10 @@ void baseUi::uiClose()
 void baseUi::uiInfoSet()
 {
 }
+
+int baseUi::getHealthState()
+{
+	return 0;
+}
+
+

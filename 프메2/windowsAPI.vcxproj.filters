@@ -243,6 +243,9 @@
     <ClInclude Include="visit.h">
       <Filter>PlayGround\ui\mainUi</Filter>
     </ClInclude>
+    <ClInclude Include="healthCare.h">
+      <Filter>PlayGround\ui\mainUi</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -378,6 +381,9 @@
       <Filter>PlayGround\ui\mainUi</Filter>
     </ClCompile>
     <ClCompile Include="visit.cpp">
+      <Filter>PlayGround\ui\mainUi</Filter>
+    </ClCompile>
+    <ClCompile Include="healthCare.cpp">
       <Filter>PlayGround\ui\mainUi</Filter>
     </ClCompile>
   </ItemGroup>
