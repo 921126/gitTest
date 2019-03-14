@@ -61,7 +61,9 @@ HRESULT playGround::init()
 			}
 			//1-5. 상점리스트 
 			{
+				IMAGEMANAGER->addImage("거리이미지", L"image/ui/UI_shop.png", 290, 181);
 				IMAGEMANAGER->addFrameImage("상점목록", L"image/icon/icon_shoplist.png", 240, 40, 6, 1);
+				IMAGEMANAGER->addFrameImage("거리사람들", L"image/face/shop_face.png", 840, 144, 6, 1);
 			} 
 			//1-6. 성 방문
 			{
@@ -97,6 +99,10 @@ HRESULT playGround::init()
 			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_8], L"image/object/object_08.png", 240, 240, 6, 6);
 			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_9], L"image/object/object_09.png", 240, 240, 6, 6);
 			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_10], L"image/object/object_10.png", 240, 240, 6, 6);
+		}
+		//etc icon
+		{
+			IMAGEMANAGER->addFrameImage("아이템들", L"image/icon/items.png", 273, 195, 7, 5);
 		}
 	}
 	//================================================================================= 프레임 이미지

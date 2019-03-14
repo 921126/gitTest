@@ -1,6 +1,6 @@
 #pragma once
 
-
+/*
 enum PLAYER_AGE
 {
 	AGE_10 = 1,
@@ -12,16 +12,6 @@ enum PLAYER_AGE
 	AGE_16,
 	AGE_17,
 	AGE_18
-};
-enum PLAYER_BLOODTYPE					//혈액형
-{
-	BLOODTYPE_NONE,
-
-	BLOODTYPE_A,
-	BLOODTYPE_B,
-	BLOODTYPE_O,
-	BLOODTYPE_AB
-
 };
 enum PLAYER_CONSTRLLATION				//별자리
 {
@@ -74,6 +64,7 @@ typedef struct tagPlayerStatus			//능력치
 	unsigned int charactre;				//성품
 
 };
+*/
 class playerInfo
 {
 public:

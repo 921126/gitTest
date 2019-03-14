@@ -25,13 +25,9 @@ enum WEEK
 { 
 	MON, TUE, WED, THU, FRI, SAT, SUN
 };
-enum ITEM_TYPE	 
-{ 
-	ITEM_WEAPON, ITEM_ARMOR, ITME_CLOTHES, ITEM_COOK, 
-};
-
 struct tagObj
 {
+
 	D2D1_RECT_F rc;
 	bool isData;
 	int indexX, indexY;
