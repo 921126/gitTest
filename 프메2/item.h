@@ -14,17 +14,12 @@ enum ITEM_TYPE
 	WEAPON_06,	//¹Ì½º¸± °Ë
 	WEAPON_07,	//µ¿¹æ¿Ü³¯ °Ë
 
-	ARMOR_NONE = 100,
-
 	ARMOR_01,	//½ÇÅ© °©¿Ê
 	ARMOR_02,	//¹Ì½º¸± °©¿Ê
 	ARMOR_03,	//Ã¶ °©¿Ê
 	ARMOR_04,	//¼è»ç±Û °©¿Ê
 	ARMOR_05,	//°¡Á× °©¿Ê 
 
-	CLOTHES_NONE = 200,
-
-	
 	CLOTHES_01,	//¿©¸§ ¿Ê
 	CLOTHES_02,	//°Ü¿ï ¿Ê
 	CLOTHES_03,	//¸ñ¸é µå·¹½º
@@ -33,16 +28,12 @@ enum ITEM_TYPE
 	CLOTHES_06,	//°¡½Ã µå·¹½º
 	CLOTHES_07, //Æò»ó º¹
 
-	GENERAL_NONE = 300,
-
 	GENERAL_01,	//ÀÎÇü
 	GENERAL_02,	//ÂþÀÜ
 	GENERAL_03,	//Ã¥
 	GENERAL_04,	//½ÃÁý
 	GENERAL_05,	//ÄèÀ¯È¯
 	GENERAL_06,	//ÆøÅº
-
-	FOOD_NONE	= 400,
 
 	FOOD_01,	//ÄÉÀÌÅ©
 	FOOD_02,	//¹°°í±â	¿ä¸®

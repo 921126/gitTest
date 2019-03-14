@@ -46,7 +46,7 @@ private:
 	SHOPLIST_STATE _shopState;
 	VISIT_SHOP	   _vShop;
 
-	tagItemWeapon _itemWeapon[7];
+	tagItemWeapon _itemWeapon[29];
 	tagItemArmor _itemArmor[5];
 
 	D2D1_RECT_F _rc[7];

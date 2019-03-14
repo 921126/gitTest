@@ -34,15 +34,20 @@ HRESULT shopList::init()
 	}
 	//아이템 상자 프레임
 	{
-		FRAMEMANAGER->addFrame("아이템상자1", 5, 415, 11, 5);
-		FRAMEMANAGER->addFrame("아이템상자2", 203, 415, 11, 5);
-		FRAMEMANAGER->addFrame("아이템상자3", 401, 415, 11, 5);
-		FRAMEMANAGER->addFrame("아이템상자4", 599, 415, 11, 5);
+		FRAMEMANAGER->addFrame("아이템상자1", 30, 440, 10, 4);
+		FRAMEMANAGER->addFrame("아이템상자2", 210, 440, 10, 4);
+		FRAMEMANAGER->addFrame("아이템상자3", 390, 440, 10, 4);
+		FRAMEMANAGER->addFrame("아이템상자4", 570, 440, 10, 4);
 
-		FRAMEMANAGER->addFrame("아이템상자5", 5, 505, 11, 5);
-		FRAMEMANAGER->addFrame("아이템상자6", 203, 505, 11, 5);
-		FRAMEMANAGER->addFrame("아이템상자7", 401, 505, 11, 5);
-		FRAMEMANAGER->addFrame("아이템상자8", 599, 505, 11, 5);
+		FRAMEMANAGER->addFrame("아이템상자5", 30, 512, 10, 4);
+		FRAMEMANAGER->addFrame("아이템상자6", 210, 512, 10, 4);
+		FRAMEMANAGER->addFrame("아이템상자7", 390, 512, 10, 4);
+		FRAMEMANAGER->addFrame("아이템상자8", 570, 512, 10, 4);
+
+		FRAMEMANAGER->addFrame("아이템상자9",  570, 152, 10, 4);
+		FRAMEMANAGER->addFrame("아이템상자10", 570, 224, 10, 4);
+		FRAMEMANAGER->addFrame("아이템상자11", 570, 296, 10, 4);
+		FRAMEMANAGER->addFrame("아이템상자12", 570, 368, 10, 4);
 	}
 	FRAMEMANAGER->addFrame("무기점선택", 600, 260, 10, 6);
 
@@ -263,28 +268,108 @@ void shopList::render()
 
 		if (_vShop == V_WEAPON_SHOP)
 		{
-			FRAMEMANAGER->findMenuFrame("아이템상자1")->render("스케쥴박스");
-			IMAGEMANAGER->findImage("아이템들")->frameRender(16, 422, 0, 0);
-			D2DMANAGER->drawText(string2wstring( _itemWeapon[1].name).c_str(), 60, 422, 18, RGB(255,255,255));
-			D2DMANAGER->drawText(to_wstring(_itemWeapon[1].price).c_str(), 60, 440, 18, RGB(255, 255, 255));
-			swprintf_s(shopList, L"G");
-			D2DMANAGER->drawText(shopList, 80, 440, 18, RGB(255, 255, 255));
-			D2DMANAGER->drawText(string2wstring(_itemWeapon[1].info).c_str(), 15, 475, 18, RGB(255, 255, 255));
+			{
+				FRAMEMANAGER->findMenuFrame("아이템상자1")->render("스케쥴박스");
+				IMAGEMANAGER->findImage("아이템들")->frameRender(41, 447, 0, 0);
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[1].name).c_str(), 85, 447, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(to_wstring(_itemWeapon[1].price).c_str(), 85, 468, 18, RGB(255, 255, 255));
+				swprintf_s(shopList, L"G");
+				D2DMANAGER->drawText(shopList, 105, 468, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[1].info).c_str(), 41, 489, 16, RGB(255, 255, 255));
 
-			FRAMEMANAGER->findMenuFrame("아이템상자2")->render("스케쥴박스");
-			IMAGEMANAGER->findImage("아이템들")->frameRender(214, 422, 1, 0);
-			D2DMANAGER->drawText(string2wstring(_itemWeapon[2].name).c_str(), 259, 422, 18, RGB(255, 255, 255));
-			D2DMANAGER->drawText(to_wstring(_itemWeapon[2].price).c_str(), 259, 440, 18, RGB(255, 255, 255));
-			swprintf_s(shopList, L"G");
-			D2DMANAGER->drawText(shopList, 279, 440, 18, RGB(255, 255, 255));
-			D2DMANAGER->drawText(string2wstring(_itemWeapon[2].info).c_str(), 214, 475, 18, RGB(255, 255, 255));
-			FRAMEMANAGER->findMenuFrame("아이템상자3")->render("스케쥴박스");
-			FRAMEMANAGER->findMenuFrame("아이템상자4")->render("스케쥴박스");
+				FRAMEMANAGER->findMenuFrame("아이템상자2")->render("스케쥴박스");
+				IMAGEMANAGER->findImage("아이템들")->frameRender(221, 447, 1, 0);
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[2].name).c_str(), 265, 447, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(to_wstring(_itemWeapon[2].price).c_str(), 265, 468, 18, RGB(255, 255, 255));
+				swprintf_s(shopList, L"G");
+				D2DMANAGER->drawText(shopList, 285, 468, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[2].info).c_str(), 221, 489, 16, RGB(255, 255, 255));
 
-			FRAMEMANAGER->findMenuFrame("아이템상자5")->render("스케쥴박스");
-			FRAMEMANAGER->findMenuFrame("아이템상자6")->render("스케쥴박스");
-			FRAMEMANAGER->findMenuFrame("아이템상자7")->render("스케쥴박스");
-			FRAMEMANAGER->findMenuFrame("아이템상자8")->render("스케쥴박스");
+				FRAMEMANAGER->findMenuFrame("아이템상자3")->render("스케쥴박스");
+				IMAGEMANAGER->findImage("아이템들")->frameRender(401, 447, 2, 0);
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[3].name).c_str(), 445, 447, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(to_wstring(_itemWeapon[3].price).c_str(), 445, 468, 18, RGB(255, 255, 255));
+				swprintf_s(shopList, L"G");
+				D2DMANAGER->drawText(shopList, 475, 468, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[3].info).c_str(), 401, 489, 16, RGB(255, 255, 255));
+
+				FRAMEMANAGER->findMenuFrame("아이템상자4")->render("스케쥴박스");
+				IMAGEMANAGER->findImage("아이템들")->frameRender(581, 447, 3, 0);
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[4].name).c_str(), 625, 447, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(to_wstring(_itemWeapon[4].price).c_str(), 625, 468, 18, RGB(255, 255, 255));
+				swprintf_s(shopList, L"G");
+				D2DMANAGER->drawText(shopList, 655, 468, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[4].info).c_str(), 581, 489, 16, RGB(255, 255, 255));
+			}
+			
+			{
+				FRAMEMANAGER->findMenuFrame("아이템상자5")->render("스케쥴박스");
+				IMAGEMANAGER->findImage("아이템들")->frameRender(41, 519, 4, 0);
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[5].name).c_str(), 85, 519, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(to_wstring(_itemWeapon[5].price).c_str(), 85, 540, 18, RGB(255, 255, 255));
+				swprintf_s(shopList, L"G");
+				D2DMANAGER->drawText(shopList, 115, 540, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[5].info).c_str(), 41, 561, 16, RGB(255, 255, 255));
+
+				FRAMEMANAGER->findMenuFrame("아이템상자6")->render("스케쥴박스");
+				IMAGEMANAGER->findImage("아이템들")->frameRender(221, 519, 5, 0);
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[6].name).c_str(), 265, 519, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(to_wstring(_itemWeapon[6].price).c_str(), 265, 540, 18, RGB(255, 255, 255));
+				swprintf_s(shopList, L"G");
+				D2DMANAGER->drawText(shopList, 305, 540, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[6].info).c_str(), 221, 561, 16, RGB(255, 255, 255));
+
+				FRAMEMANAGER->findMenuFrame("아이템상자7")->render("스케쥴박스");
+				IMAGEMANAGER->findImage("아이템들")->frameRender(401, 519, 6, 0);
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[7].name).c_str(), 445, 519, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(to_wstring(_itemWeapon[7].price).c_str(), 445, 540, 18, RGB(255, 255, 255));
+				swprintf_s(shopList, L"G");
+				D2DMANAGER->drawText(shopList, 485, 540, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[7].info).c_str(), 401, 561, 16, RGB(255, 255, 255));
+
+				FRAMEMANAGER->findMenuFrame("아이템상자8")->render("스케쥴박스");
+				IMAGEMANAGER->findImage("아이템들")->frameRender(581, 519, 4, 1);
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[12].name).c_str(), 625, 519, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(to_wstring(_itemWeapon[12].price).c_str(), 625, 540, 18, RGB(255, 255, 255));
+				swprintf_s(shopList, L"G");
+				D2DMANAGER->drawText(shopList, 645, 540, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[12].info).c_str(), 581, 561, 16, RGB(255, 255, 255));
+			}
+
+			{
+				FRAMEMANAGER->findMenuFrame("아이템상자9")->render("스케쥴박스");
+				IMAGEMANAGER->findImage("아이템들")->frameRender(581, 159, 0, 1);
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[8].name).c_str(), 625, 159, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(to_wstring(_itemWeapon[8].price).c_str(), 625, 180, 18, RGB(255, 255, 255));
+				swprintf_s(shopList, L"G");
+				D2DMANAGER->drawText(shopList, 665, 180, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[8].info).c_str(), 581, 201, 16, RGB(255, 255, 255));
+
+				FRAMEMANAGER->findMenuFrame("아이템상자10")->render("스케쥴박스");
+				IMAGEMANAGER->findImage("아이템들")->frameRender(581, 231, 1, 1);
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[9].name).c_str(), 625, 231, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(to_wstring(_itemWeapon[9].price).c_str(), 625, 252, 18, RGB(255, 255, 255));
+				swprintf_s(shopList, L"G");
+				D2DMANAGER->drawText(shopList, 665, 252, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[9].info).c_str(), 581, 273, 16, RGB(255, 255, 255));
+
+				FRAMEMANAGER->findMenuFrame("아이템상자11")->render("스케쥴박스");
+				IMAGEMANAGER->findImage("아이템들")->frameRender(581, 303, 2, 1);
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[10].name).c_str(), 625, 303, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(to_wstring(_itemWeapon[10].price).c_str(), 625, 324, 18, RGB(255, 255, 255));
+				swprintf_s(shopList, L"G");
+				D2DMANAGER->drawText(shopList, 655, 324, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[10].info).c_str(), 581, 345, 16, RGB(255, 255, 255));
+
+				FRAMEMANAGER->findMenuFrame("아이템상자12")->render("스케쥴박스");
+				IMAGEMANAGER->findImage("아이템들")->frameRender(581, 375, 3, 1);
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[11].name).c_str(), 625, 375, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(to_wstring(_itemWeapon[11].price).c_str(), 625, 396, 18, RGB(255, 255, 255));
+				swprintf_s(shopList, L"G");
+				D2DMANAGER->drawText(shopList, 655, 396, 18, RGB(255, 255, 255));
+				D2DMANAGER->drawText(string2wstring(_itemWeapon[11].info).c_str(), 581, 417, 16, RGB(255, 255, 255));
+			}
+			
 		}
 	}
 
@@ -305,21 +390,13 @@ void shopList::itemDateSet()
 	//if (_vShop == V_WEAPON_SHOP)
 	{
 		item itemData;
-		for (int ii = WEAPON_01; ii <= WEAPON_07; ++ii)
+		for (int ii = WEAPON_01; ii <= FOOD_04; ++ii)
 		{
 			itemData.init((ITEM_TYPE)ii);
 
 			_itemWeapon[ii].name = itemData.getItemName((ITEM_TYPE)ii);
 			_itemWeapon[ii].price = itemData.getBuyPrice((ITEM_TYPE)ii);
 			_itemWeapon[ii].info = itemData.getItemInfo((ITEM_TYPE)ii);
-		}
-		for (int jj = ARMOR_01; jj <= ARMOR_05; ++jj)
-		{
-			itemData.init((ITEM_TYPE)jj);
-
-			_itemArmor[jj - ARMOR_01].name = itemData.getItemName((ITEM_TYPE)jj);
-			_itemArmor[jj - ARMOR_01].price = itemData.getBuyPrice((ITEM_TYPE)jj);
-			_itemArmor[jj - ARMOR_01].info = itemData.getItemInfo((ITEM_TYPE)jj);
 		}
 	}
 

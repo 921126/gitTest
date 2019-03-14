@@ -70,8 +70,6 @@ HRESULT item::init(ITEM_TYPE type)
 		_itemValue2 = 10;
 		_buyPrice	= BUY_PRICE_WEAPON_07;
 		break;
-	case ARMOR_NONE:
-		break;
 	case ARMOR_01:
 		_itemName	= "실크 갑옷";
 		_itemInfo	= "방어 +2 / 색기 +50";
@@ -105,8 +103,6 @@ HRESULT item::init(ITEM_TYPE type)
 		_itemInfo	= "방어 +8";
 		_itemValue1 = 8;
 		_buyPrice	= BUY_PRICE_ARMOR_05;
-		break;
-	case CLOTHES_NONE:
 		break;
 	case CLOTHES_01:
 		_itemName = "여름옷";
@@ -145,8 +141,6 @@ HRESULT item::init(ITEM_TYPE type)
 	case CLOTHES_07:
 		_itemName = "평상 복";
 		break;
-	case GENERAL_NONE:
-		break;
 	case GENERAL_01:
 		_itemName = "인형";
 		_itemInfo = "감수성 +5 / 스트레스 -40";
@@ -181,8 +175,6 @@ HRESULT item::init(ITEM_TYPE type)
 		_itemName = "폭탄";
 		_itemInfo = "공격용";
 		_buyPrice = BUY_PRICE_GENERAL_06;
-		break;
-	case FOOD_NONE:
 		break;
 	case FOOD_01:
 		_itemName = "케이크";
