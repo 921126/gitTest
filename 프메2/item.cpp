@@ -78,7 +78,7 @@ HRESULT item::init(ITEM_TYPE type)
 		_buyPrice	= BUY_PRICE_ARMOR_01;
 		break;
 	case ARMOR_02:
-		_itemName	= "¹Ì½º¸± °©¿Ê";
+		_itemName	= "¹Ì½º¸± °©¿Ê"; 
 		_itemInfo	= "¹æ¾î +22 / Ç×¸¶ +15";
 		_itemValue1 = 22;
 		_itemValue2 = 15;
