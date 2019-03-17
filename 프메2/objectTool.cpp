@@ -264,7 +264,7 @@ void objectTool::buttonsetting()
 			--_currentPage;
 			if (_currentPage < OBJECT_1)
 			{
-				_currentPage = OBJECT_22;
+				_currentPage = OBJECT_24;
 			}
 		}
 	}
@@ -275,7 +275,7 @@ void objectTool::buttonsetting()
 		if (KEYMANAGER->isOnceKeyDown(VK_LBUTTON))
 		{
 			++_currentPage;
-			if (_currentPage > OBJECT_22)
+			if (_currentPage > OBJECT_24)
 			{
 				_currentPage = OBJECT_1;
 			}

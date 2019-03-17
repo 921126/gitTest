@@ -27,6 +27,7 @@ enum TERRAIN_INFO
 	TERRAIN_NONE,
 	TERRAIN_ROAD,
 	TERRAIN_ROAD2,
+	TERRAIN_ROAD3,
 
 	TERRAIN_COUNT
 };
@@ -55,12 +56,15 @@ enum OBJECT_INFO
 	OBJECT_20,
 	OBJECT_21,
 	OBJECT_22,
+	OBJECT_23,
+	OBJECT_24,
 
 	OBJECT_COUNT
 };
-static string TERRAIN_INFO[TERRAIN_COUNT]	= { "none" , "맵타일_01", "맵타일_02" };
+static string TERRAIN_INFO[TERRAIN_COUNT]	= { "none" , "맵타일_01", "맵타일_02", "맵타일_03" };
 static string OBJECT_INFO[OBJECT_COUNT]		= { "none" , "오브젝트_01", "오브젝트_02" ,"오브젝트_03" ,"오브젝트_04" ,"오브젝트_05" ,"오브젝트_06" ,"오브젝트_07" ,"오브젝트_08","오브젝트_09","오브젝트_10","오브젝트_11",
-														 "오브젝트_12", "오브젝트_13", "오브젝트_14", "오브젝트_15", "오브젝트_16", "오브젝트_17" ,"오브젝트_18" ,"오브젝트_19","오브젝트_20","오브젝트_21","오브젝트_22" };
+														 "오브젝트_12", "오브젝트_13", "오브젝트_14", "오브젝트_15", "오브젝트_16", "오브젝트_17" ,"오브젝트_18" ,"오브젝트_19","오브젝트_20","오브젝트_21","오브젝트_22",
+														 "오브젝트_23", "오브젝트_24"};
 
 typedef class tagTile
 {

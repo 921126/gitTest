@@ -404,7 +404,7 @@ void mapTool::buttonsetting()
 				--_currentPage;
 				if (_currentPage < TERRAIN_ROAD)
 				{
-					_currentPage = TERRAIN_ROAD2;
+					_currentPage = TERRAIN_ROAD3;
 				}
 			}
 		}
@@ -415,7 +415,7 @@ void mapTool::buttonsetting()
 			if (KEYMANAGER->isOnceKeyDown(VK_LBUTTON))
 			{
 				++_currentPage;
-				if (_currentPage > TERRAIN_ROAD2)
+				if (_currentPage > TERRAIN_ROAD3)
 				{
 					_currentPage = TERRAIN_ROAD;
 				}

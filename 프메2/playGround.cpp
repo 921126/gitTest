@@ -88,6 +88,7 @@ HRESULT playGround::init()
 			//지형
 			IMAGEMANAGER->addFrameImage(TERRAIN_INFO[TERRAIN_ROAD], L"image/tile/tile_01.png", 240, 240, 6, 6);
 			IMAGEMANAGER->addFrameImage(TERRAIN_INFO[TERRAIN_ROAD2], L"image/tile/tile_02.png", 240, 240, 6, 6);
+			IMAGEMANAGER->addFrameImage(TERRAIN_INFO[TERRAIN_ROAD3], L"image/tile/tile_03.png", 240, 240, 6, 6);
 			//오브젝트
 			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_1], L"image/object/object_01.png", 240, 240, 6, 6);
 			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_2], L"image/object/object_02.png", 240, 240, 6, 6);
@@ -111,6 +112,8 @@ HRESULT playGround::init()
 			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_20], L"image/object/object_20.png", 240, 240, 6, 6);
 			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_21], L"image/object/object_21.png", 240, 240, 6, 6);
 			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_22], L"image/object/object_22.png", 240, 240, 6, 6);
+			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_23], L"image/object/object_23.png", 240, 240, 6, 6);
+			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_24], L"image/object/object_24.png", 240, 240, 6, 6);
 		}
 		//etc icon
 		{
@@ -173,7 +176,7 @@ HRESULT playGround::init()
 
 	}
 
-	SCENEMANAGER->changeScene("오브젝트툴");
+	SCENEMANAGER->changeScene("맵툴");
 	
 	return S_OK;
 }

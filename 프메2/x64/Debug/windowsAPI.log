@@ -1,5 +1,5 @@
 ﻿  mapTool.cpp
-c:\users\hayoung\desktop\gittest\프메2\tilenode.h(100): warning C4091: 'typedef ': 변수를 선언하지 않으면 'tagTile' 왼쪽은 무시됩니다.
+c:\users\hayoung\desktop\gittest\프메2\tilenode.h(104): warning C4091: 'typedef ': 변수를 선언하지 않으면 'tagTile' 왼쪽은 무시됩니다.
 c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(105): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
 c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(107): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
 c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(146): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
@@ -24,7 +24,7 @@ c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(516): warning C4018: '<': s
 c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(533): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
 c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(535): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   objectTool.cpp
-c:\users\hayoung\desktop\gittest\프메2\tilenode.h(100): warning C4091: 'typedef ': 변수를 선언하지 않으면 'tagTile' 왼쪽은 무시됩니다.
+c:\users\hayoung\desktop\gittest\프메2\tilenode.h(104): warning C4091: 'typedef ': 변수를 선언하지 않으면 'tagTile' 왼쪽은 무시됩니다.
 c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(131): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
 c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(133): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
 c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(187): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
@@ -46,11 +46,12 @@ c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(509): warning C4018: '<'
 c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(526): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
 c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(528): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   playGround.cpp
-c:\users\hayoung\desktop\gittest\프메2\tilenode.h(100): warning C4091: 'typedef ': 변수를 선언하지 않으면 'tagTile' 왼쪽은 무시됩니다.
-c:\users\hayoung\desktop\gittest\프메2\playground.cpp(209): warning C4477: 'swprintf_s' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double'입니다.
-c:\users\hayoung\desktop\gittest\프메2\playground.cpp(211): warning C4477: 'swprintf_s' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double'입니다.
+c:\users\hayoung\desktop\gittest\프메2\tilenode.h(104): warning C4091: 'typedef ': 변수를 선언하지 않으면 'tagTile' 왼쪽은 무시됩니다.
+c:\users\hayoung\desktop\gittest\프메2\playground.cpp(212): warning C4477: 'swprintf_s' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double'입니다.
+c:\users\hayoung\desktop\gittest\프메2\playground.cpp(214): warning C4477: 'swprintf_s' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double'입니다.
   windowsAPI.cpp
-c:\users\hayoung\desktop\gittest\프메2\tilenode.h(100): warning C4091: 'typedef ': 변수를 선언하지 않으면 'tagTile' 왼쪽은 무시됩니다.
+c:\users\hayoung\desktop\gittest\프메2\tilenode.h(104): warning C4091: 'typedef ': 변수를 선언하지 않으면 'tagTile' 왼쪽은 무시됩니다.
 c:\users\hayoung\desktop\gittest\프메2\windowsapi.cpp(85): warning C4244: 'return': 'WPARAM'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   코드를 생성하고 있습니다...
+  LINK : C:\Users\hayoung\Desktop\gitTest\프메2\x64\Debug\windowsAPI.exe을(를) 찾을 수 없거나 마지막 증분 링크에 의해 빌드되지 않았습니다. 전체 링크를 수행하고 있습니다.
   windowsAPI.vcxproj -> C:\Users\hayoung\Desktop\gitTest\프메2\x64\Debug\windowsAPI.exe
