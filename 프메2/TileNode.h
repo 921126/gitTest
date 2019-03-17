@@ -43,11 +43,24 @@ enum OBJECT_INFO
 	OBJECT_8,
 	OBJECT_9,
 	OBJECT_10,
+	OBJECT_11,
+	OBJECT_12,
+	OBJECT_13,
+	OBJECT_14,
+	OBJECT_15,
+	OBJECT_16,
+	OBJECT_17, 
+	OBJECT_18,
+	OBJECT_19,
+	OBJECT_20,
+	OBJECT_21,
+	OBJECT_22,
 
 	OBJECT_COUNT
 };
 static string TERRAIN_INFO[TERRAIN_COUNT]	= { "none" , "맵타일_01", "맵타일_02" };
-static string OBJECT_INFO[OBJECT_COUNT]		= { "none" , "오브젝트_01", "오브젝트_02" ,"오브젝트_03" ,"오브젝트_04" ,"오브젝트_05" ,"오브젝트_06" ,"오브젝트_07" ,"오브젝트_08","오브젝트_09","오브젝트_10" };
+static string OBJECT_INFO[OBJECT_COUNT]		= { "none" , "오브젝트_01", "오브젝트_02" ,"오브젝트_03" ,"오브젝트_04" ,"오브젝트_05" ,"오브젝트_06" ,"오브젝트_07" ,"오브젝트_08","오브젝트_09","오브젝트_10","오브젝트_11",
+														 "오브젝트_12", "오브젝트_13", "오브젝트_14", "오브젝트_15", "오브젝트_16", "오브젝트_17" ,"오브젝트_18" ,"오브젝트_19","오브젝트_20","오브젝트_21","오브젝트_22" };
 
 typedef class tagTile
 {

@@ -99,6 +99,18 @@ HRESULT playGround::init()
 			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_8], L"image/object/object_08.png", 240, 240, 6, 6);
 			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_9], L"image/object/object_09.png", 240, 240, 6, 6);
 			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_10], L"image/object/object_10.png", 240, 240, 6, 6);
+			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_11], L"image/object/object_11.png", 240, 240, 6, 6);
+			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_12], L"image/object/object_12.png", 240, 240, 6, 6);
+			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_13], L"image/object/object_13.png", 240, 240, 6, 6);
+			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_14], L"image/object/object_14.png", 240, 240, 6, 6);
+			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_15], L"image/object/object_15.png", 240, 240, 6, 6);
+			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_16], L"image/object/object_16.png", 240, 240, 6, 6);
+			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_17], L"image/object/object_17.png", 240, 240, 6, 6);
+			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_18], L"image/object/object_18.png", 240, 240, 6, 6);
+			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_19], L"image/object/object_19.png", 240, 240, 6, 6);
+			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_20], L"image/object/object_20.png", 240, 240, 6, 6);
+			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_21], L"image/object/object_21.png", 240, 240, 6, 6);
+			IMAGEMANAGER->addFrameImage(OBJECT_INFO[OBJECT_22], L"image/object/object_22.png", 240, 240, 6, 6);
 		}
 		//etc icon
 		{
@@ -161,7 +173,7 @@ HRESULT playGround::init()
 
 	}
 
-	SCENEMANAGER->changeScene("메인씬");
+	SCENEMANAGER->changeScene("오브젝트툴");
 	
 	return S_OK;
 }

@@ -24,10 +24,24 @@ HRESULT objectTool::init()
 		_sampleImg_Obj[7] = IMAGEMANAGER->findImage(OBJECT_INFO[OBJECT_7]);
 		_sampleImg_Obj[8] = IMAGEMANAGER->findImage(OBJECT_INFO[OBJECT_8]);
 		_sampleImg_Obj[9] = IMAGEMANAGER->findImage(OBJECT_INFO[OBJECT_9]);
+		_sampleImg_Obj[10] = IMAGEMANAGER->findImage(OBJECT_INFO[OBJECT_10]);
+		_sampleImg_Obj[11] = IMAGEMANAGER->findImage(OBJECT_INFO[OBJECT_11]);
+		_sampleImg_Obj[12] = IMAGEMANAGER->findImage(OBJECT_INFO[OBJECT_12]);
+		_sampleImg_Obj[13] = IMAGEMANAGER->findImage(OBJECT_INFO[OBJECT_13]);
+		_sampleImg_Obj[14] = IMAGEMANAGER->findImage(OBJECT_INFO[OBJECT_14]);
+		_sampleImg_Obj[15] = IMAGEMANAGER->findImage(OBJECT_INFO[OBJECT_15]);
+		_sampleImg_Obj[16] = IMAGEMANAGER->findImage(OBJECT_INFO[OBJECT_16]);
+		_sampleImg_Obj[17] = IMAGEMANAGER->findImage(OBJECT_INFO[OBJECT_17]);
+		_sampleImg_Obj[18] = IMAGEMANAGER->findImage(OBJECT_INFO[OBJECT_18]);
+		_sampleImg_Obj[19] = IMAGEMANAGER->findImage(OBJECT_INFO[OBJECT_19]);
+		_sampleImg_Obj[20] = IMAGEMANAGER->findImage(OBJECT_INFO[OBJECT_20]);
+		_sampleImg_Obj[21] = IMAGEMANAGER->findImage(OBJECT_INFO[OBJECT_21]);
+		_sampleImg_Obj[22] = IMAGEMANAGER->findImage(OBJECT_INFO[OBJECT_22]);
+
 	}
 
 	//카메라 위치 잡아주기
-	CAMERA->init(0, 0, 4000, 1880);
+	CAMERA->init(0, 0, 4000, 2000);
 
 	_currentPage = OBJECT_1;
 
@@ -168,8 +182,8 @@ void objectTool::setSampleTile()
 void objectTool::setTile()
 {
 	//맵
-	TILEX = 100;
-	TILEY = 47;
+	TILEX = 110;
+	TILEY = 60;
 	for (int i = 0; i < TILEY; ++i)
 	{
 		vector<tagTile*>		vTile;
@@ -250,7 +264,7 @@ void objectTool::buttonsetting()
 			--_currentPage;
 			if (_currentPage < OBJECT_1)
 			{
-				_currentPage = OBJECT_10;
+				_currentPage = OBJECT_22;
 			}
 		}
 	}
@@ -261,7 +275,7 @@ void objectTool::buttonsetting()
 		if (KEYMANAGER->isOnceKeyDown(VK_LBUTTON))
 		{
 			++_currentPage;
-			if (_currentPage > OBJECT_10)
+			if (_currentPage > OBJECT_22)
 			{
 				_currentPage = OBJECT_1;
 			}

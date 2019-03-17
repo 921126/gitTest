@@ -14,7 +14,7 @@ mapTool::~mapTool()
 HRESULT mapTool::init()
 {
 	//카메라 위치 잡아주기
-	CAMERA->init(0, 0, 4000, 1880);
+	CAMERA->init(0, 0, 4000, 2000);
 
 	_currentPage = TERRAIN_ROAD;
 
@@ -180,8 +180,8 @@ void mapTool::setSampleTile()
 void mapTool::setTile()
 {
 	//맵
-	TILEX = 100;
-	TILEY = 47;
+	TILEX = 110;
+	TILEY = 60;
 	for (int i = 0; i < TILEY; ++i)
 	{
 		vector<tagTile*>		vTile;
@@ -436,6 +436,7 @@ void mapTool::mapSave()
 	WriteFile(file, mapSize, strlen(mapSize), &write, NULL);
 
 	CloseHandle(file);
+
 
 	//맵타일 저장
 	HANDLE file2;

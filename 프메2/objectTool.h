@@ -5,7 +5,7 @@
 #include <vector>
 #include <assert.h>
 
-#define OBJECT_IMG_NUM		9
+#define OBJECT_IMG_NUM		22
 #define SAMPLE_TILE_SIZE	TILE_SIZE * SAMPLETILE			//샘플타일 사이즈
 #define SAMPLE_TILE_START	(WINSIZEX - SAMPLE_TILE_SIZE)	//샘플타일 시작지점
 #define CAMERA_RANGE		13 * TILE_SIZE					//카메라 이동 범위

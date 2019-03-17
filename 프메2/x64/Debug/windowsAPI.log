@@ -1,2 +1,56 @@
-﻿  shopList.cpp
-  windowsAPI.vcxproj -> C:\Users\nabom\OneDrive\Desktop\team15ductProject\gitTest\프메2\x64\Debug\windowsAPI.exe
+﻿  mapTool.cpp
+c:\users\hayoung\desktop\gittest\프메2\tilenode.h(100): warning C4091: 'typedef ': 변수를 선언하지 않으면 'tagTile' 왼쪽은 무시됩니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(105): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(107): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(146): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(148): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(156): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(185): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(190): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(222): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(223): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(262): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(280): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(311): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(330): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(362): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(364): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(381): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(383): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(436): warning C4267: '인수': 'size_t'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(448): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(450): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(516): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(533): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\maptool.cpp(535): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  objectTool.cpp
+c:\users\hayoung\desktop\gittest\프메2\tilenode.h(100): warning C4091: 'typedef ': 변수를 선언하지 않으면 'tagTile' 왼쪽은 무시됩니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(131): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(133): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(187): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(192): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(222): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(224): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(241): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(243): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(290): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(291): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(322): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(340): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(371): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(390): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(430): warning C4267: '인수': 'size_t'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(441): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(443): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(509): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(526): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\hayoung\desktop\gittest\프메2\objecttool.cpp(528): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  playGround.cpp
+c:\users\hayoung\desktop\gittest\프메2\tilenode.h(100): warning C4091: 'typedef ': 변수를 선언하지 않으면 'tagTile' 왼쪽은 무시됩니다.
+c:\users\hayoung\desktop\gittest\프메2\playground.cpp(209): warning C4477: 'swprintf_s' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double'입니다.
+c:\users\hayoung\desktop\gittest\프메2\playground.cpp(211): warning C4477: 'swprintf_s' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double'입니다.
+  windowsAPI.cpp
+c:\users\hayoung\desktop\gittest\프메2\tilenode.h(100): warning C4091: 'typedef ': 변수를 선언하지 않으면 'tagTile' 왼쪽은 무시됩니다.
+c:\users\hayoung\desktop\gittest\프메2\windowsapi.cpp(85): warning C4244: 'return': 'WPARAM'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  windowsAPI.vcxproj -> C:\Users\hayoung\Desktop\gitTest\프메2\x64\Debug\windowsAPI.exe
