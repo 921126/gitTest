@@ -21,7 +21,9 @@ HRESULT playGround::init()
 		//01. 배경
 		IMAGEMANAGER->addImage("메인배경", L"image/bg.png", 800, 600);
 		IMAGEMANAGER->addFrameImage("캐릭터생성", L"image/ui/ui_newplayer.png", 1600, 600, 2, 1);
-		IMAGEMANAGER->addFrameImage("캐릭터생성2", L"image/ui/ui_brithday.png", 1660, 600, 2, 1);
+		IMAGEMANAGER->addFrameImage("딸달력", L"image/ui/ui_daughter_calendar.png", 1600, 600, 2, 1);
+		IMAGEMANAGER->addFrameImage("아빠달력", L"image/ui/ui_father_calendar.png", 1600, 600, 2, 1);
+		IMAGEMANAGER->addImage("노란글씨", L"image/ui/yellowtxt.png", 800, 600);
 
 		IMAGEMANAGER->addImage("메인달력", L"image/ui/UI_common_calendar.png", 180, 100);
 		IMAGEMANAGER->addImage("메인스텟", L"image/ui/UI_common_state.png", 200, 218);
@@ -80,6 +82,10 @@ HRESULT playGround::init()
 			IMAGEMANAGER->addImage("메인메뉴선택", L"image/ui/ui_menu_select.png", 50, 40);
 			IMAGEMANAGER->addImage("스케쥴메뉴선택", L"image/ui/ui_scehdule_select.png", 200, 40);
 		}
+		//etc 캐릭터생성
+		{
+			IMAGEMANAGER->addFrameImage("딸생일선택", L"image/ui/ui_daughter_select.png", 20, 465, 1, 31);
+		}
 	}
 	// 캐릭터
 	{
@@ -134,15 +140,15 @@ void playGround::render()
 	//===========================================================================
 	//				##카메라 정보 마우스 정보 시간정보 출력	##===================
 	WCHAR str[128];
-	swprintf_s(str, L"cameraX : %d", CAMERA->getPosX());
-	D2DMANAGER->drawText(str, CAMERA->getPosX(), CAMERA->getPosY() + 80);
-	swprintf_s(str, L"cameraY : %d", CAMERA->getPosY());
-	D2DMANAGER->drawText(str, CAMERA->getPosX(), CAMERA->getPosY() + 100);
-	swprintf_s(str, L"mouseX : %.2f", _ptMouse.x);
-	D2DMANAGER->drawText(str, CAMERA->getPosX(), CAMERA->getPosY() + 140);
-	swprintf_s(str, L"mouseY : %.2f", _ptMouse.y);
-	D2DMANAGER->drawText(str, CAMERA->getPosX(), CAMERA->getPosY() + 160);
-	TIMEMANAGER->render();
+	//swprintf_s(str, L"cameraX : %d", CAMERA->getPosX());
+	//D2DMANAGER->drawText(str, CAMERA->getPosX(), CAMERA->getPosY() + 80, 16, RGB(255,255,255));
+	//swprintf_s(str, L"cameraY : %d", CAMERA->getPosY());
+	//D2DMANAGER->drawText(str, CAMERA->getPosX(), CAMERA->getPosY() + 100), 16, RGB(255, 255, 255);
+	//swprintf_s(str, L"mouseX : %.2f", _ptMouse.x);
+	//D2DMANAGER->drawText(str, CAMERA->getPosX(), CAMERA->getPosY() + 140, 16, RGB(255, 255, 255));
+	//swprintf_s(str, L"mouseY : %.2f", _ptMouse.y);
+	//D2DMANAGER->drawText(str, CAMERA->getPosX(), CAMERA->getPosY() + 160, 16, RGB(255, 255, 255));
+	//TIMEMANAGER->render();
 	// Draw 끝 - 이 코드가 빠지면 D2D 출력 X
 	D2DMANAGER->endDraw();
 }
