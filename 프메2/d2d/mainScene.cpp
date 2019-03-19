@@ -81,11 +81,6 @@ void mainScene::render()
 	IMAGEMANAGER->findImage("day")->frameRender(88, 38, 0, _iday.frameY);
 	IMAGEMANAGER->findImage("dayday")->frameRender(12, 70, 0, _idayday.frameY);
 
-	if (_age == 10)
-	{
-		IMAGEMANAGER->findImage("10age_clothes")->frameRender(200, 304, 0, 0);
-		IMAGEMANAGER->findImage("10age_face")->frameRender(294, 173, 0, 0);
-	}
 	D2DMANAGER->drawText(string2wstring(_lastName).c_str(), 615, 12, 18, RGB(255, 255, 255));
 	D2DMANAGER->drawText(string2wstring(_firstName).c_str(), 615, 34, 18, RGB(255, 255, 255));
 	D2DMANAGER->drawText(string2wstring(_dietType).c_str(), 615, 165, 18, RGB(255, 255, 255));

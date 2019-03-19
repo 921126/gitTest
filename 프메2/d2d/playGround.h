@@ -4,8 +4,6 @@
 //==================== 씬등록용 헤더
 
 #include "mainScene.h"
-#include "startScene.h"
-#include "newPlayerScene.h"
 
 class playGround : public gameNode
 {
