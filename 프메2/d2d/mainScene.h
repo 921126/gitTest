@@ -7,13 +7,8 @@ class mainScene : public gameNode
 private: 
 	princess* _princess;
 
-	//========== 개인정보
 	string _firstName;
 	string _lastName;
-	string _dietType;
-
-	int _age;
-	//==================
 
 	//========== 날짜관련
 	int _year;

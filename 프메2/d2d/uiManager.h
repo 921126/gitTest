@@ -3,9 +3,6 @@
 #include "singletonBase.h"
 #include "baseUI.h"
 
-// 매니저 사용 유아이 등록하기
-#include "mainUI.h"
-
 enum UI_TYPE
 {
 	UI_NONE,

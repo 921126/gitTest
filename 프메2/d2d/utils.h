@@ -31,7 +31,6 @@ namespace TEAM_15DUCK_UTILL
 	//    렉트를 만든다(중점X좌표, 중점Y좌표, 가로크기, 세로크기)
 	RECT RectMakeCenter(int x, int y, int width, int height);
 
-	bool PtInD2D1Rect(D2D1_RECT_F& rc, POINTF p);
 
 	//====================== 동 그 라 미 관련 ===============================
 	//        원 생성함수 (hdc, left, top, 가로크기, 세로크기)
