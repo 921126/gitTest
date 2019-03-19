@@ -72,6 +72,15 @@ namespace TEAM_15DUCK_UTILL
 		return rc;
 	}
 
+	bool PtInD2D1Rect(D2D1_RECT_F & rc, POINTF p)
+	{
+		if (rc.left <= p.x && p.x <= rc.right && rc.top <= p.y && p.y <= rc.bottom)
+		{
+			return true;
+		}
+		return false;
+	}
+
 
 
 	ELLIPSE EllipseMake(float x, float y, float r)

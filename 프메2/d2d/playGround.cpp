@@ -22,6 +22,7 @@ HRESULT playGround::init()
 		IMAGEMANAGER->addImage("메인배경", L"image/bg.png", 800, 600);
 		IMAGEMANAGER->addImage("메인달력", L"image/ui/UI_common_calendar.png", 180, 100);
 		IMAGEMANAGER->addImage("메인스텟", L"image/ui/UI_common_state.png", 200, 218);
+		IMAGEMANAGER->addImage("메인메뉴", L"image/ui/ui_main_menu.png", 200, 120);
 		IMAGEMANAGER->addFrameImage("year", L"image/ui/ui_year.png", 40, 200, 1, 10);
 		IMAGEMANAGER->addFrameImage("mon", L"image/ui/ui_mon.png", 60, 240, 1, 12);
 		IMAGEMANAGER->addFrameImage("day", L"image/ui/ui_day.png", 80, 1550, 1, 31);
@@ -65,8 +66,17 @@ HRESULT playGround::init()
 			IMAGEMANAGER->addImage("텍스트박스_07", L"image/ui/UI_textbox_07.png", 18, 18);
 			IMAGEMANAGER->addImage("텍스트박스_08", L"image/ui/UI_textbox_08.png", 18, 18);
 		}
-	}
 
+		// 02. 메인
+		{
+			IMAGEMANAGER->addImage("메인메뉴선택", L"image/ui/ui_menu_select.png", 50, 40);
+			IMAGEMANAGER->addImage("스케쥴메뉴선택", L"image/ui/ui_scehdule_select.png", 200, 40);
+		}
+	}
+	// 캐릭터
+	{
+
+	}
 	//============================================================================================= 씬 추가
 
 	{
@@ -92,7 +102,7 @@ void playGround::update()
 	gameNode::update();
 
 	SCENEMANAGER->update();
-
+	UIMANAGER->update();
 }
 
 void playGround::render()
@@ -105,7 +115,7 @@ void playGround::render()
 
 
 	SCENEMANAGER->render();
-
+	UIMANAGER->render();
 
 
 

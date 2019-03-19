@@ -13,6 +13,12 @@ uiManager::~uiManager()
 
 HRESULT uiManager::init()
 {
+	//00. ¸ŞÀÎ
+	{
+		mainUI* mainScene = new mainUI;
+		mainScene->init();
+		_uiMap.insert(make_pair(UI_MAIN, mainScene));
+	}
 	return S_OK;
 }
 

@@ -21,9 +21,13 @@ HRESULT mainScene::init()
 
 	//=========================================== 정보 초기화
 	{
-		//01. 이름
-		_firstName = _princess->getDate().fristName;
-		_lastName = _princess->getDate().lastName;
+		//01. 개인정보
+		_firstName = _princess->getInfo().firstName;
+		_lastName = _princess->getInfo().lastName;
+		_dietType = _princess->getInfo().dietType;
+
+		_age = _princess->getInfo().age;
+
 	}
 	{
 		//02. 날짜
@@ -51,6 +55,8 @@ HRESULT mainScene::init()
 		_idayday.frameY = _dayday;
 	}
 
+	UIMANAGER->selectUI(UI_MAIN);
+
 	return S_OK;
 }
 
@@ -69,11 +75,15 @@ void mainScene::render()
 	IMAGEMANAGER->findImage("메인배경")->render(1);
 	IMAGEMANAGER->findImage("메인달력")->render(1);
 	IMAGEMANAGER->findImage("메인스텟")->render(600, 0);
-
+	IMAGEMANAGER->findImage("메인메뉴")->render(600, 218);
 	IMAGEMANAGER->findImage("year")->frameRender(68, 11, 0, _iyear.frameY);
 	IMAGEMANAGER->findImage("mon")->frameRender(10, 40, 0, _imon.frameY);
 	IMAGEMANAGER->findImage("day")->frameRender(88, 38, 0, _iday.frameY);
 	IMAGEMANAGER->findImage("dayday")->frameRender(12, 70, 0, _idayday.frameY);
 
-	D2DMANAGER->drawText(strlen(_lastName.c_str()), 650, 20, 24, RGB(255, 255, 255));
+	D2DMANAGER->drawText(string2wstring(_lastName).c_str(), 615, 12, 18, RGB(255, 255, 255));
+	D2DMANAGER->drawText(string2wstring(_firstName).c_str(), 615, 34, 18, RGB(255, 255, 255));
+	D2DMANAGER->drawText(string2wstring(_dietType).c_str(), 615, 165, 18, RGB(255, 255, 255));
+
+	D2DMANAGER->drawText(to_wstring(_age).c_str(), 615, 72, 28, RGB(255, 255, 255));
 }
