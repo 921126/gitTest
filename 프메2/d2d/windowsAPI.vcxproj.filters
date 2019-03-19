@@ -79,6 +79,9 @@
     <Filter Include="PlayGround\ui\frameBox">
       <UniqueIdentifier>{c4a7c754-2ea8-43ce-b2e4-276f1354a622}</UniqueIdentifier>
     </Filter>
+    <Filter Include="PlayGround\ui\uilist">
+      <UniqueIdentifier>{12a530de-72b8-42e8-9eee-697b3c31eec9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -196,7 +199,13 @@
       <Filter>PlayGround\ui\frameBox</Filter>
     </ClInclude>
     <ClInclude Include="mainUI.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>PlayGround\ui\uilist</Filter>
+    </ClInclude>
+    <ClInclude Include="startScene.h">
+      <Filter>PlayGround\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="newPlayerScene.h">
+      <Filter>PlayGround\scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -263,9 +272,6 @@
     <ClCompile Include="camera.cpp">
       <Filter>PlayGround\camera</Filter>
     </ClCompile>
-    <ClCompile Include="windowsAPI.cpp">
-      <Filter>헤더 파일</Filter>
-    </ClCompile>
     <ClCompile Include="weaponShop.cpp">
       <Filter>PlayGround\shop</Filter>
     </ClCompile>
@@ -300,7 +306,16 @@
       <Filter>PlayGround\ui\frameBox</Filter>
     </ClCompile>
     <ClCompile Include="mainUI.cpp">
+      <Filter>PlayGround\ui\uilist</Filter>
+    </ClCompile>
+    <ClCompile Include="startScene.cpp">
+      <Filter>PlayGround\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="windowsAPI.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="newPlayerScene.cpp">
+      <Filter>PlayGround\scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
