@@ -20,6 +20,9 @@ HRESULT playGround::init()
 	{
 		//01. 배경
 		IMAGEMANAGER->addImage("메인배경", L"image/bg.png", 800, 600);
+		IMAGEMANAGER->addFrameImage("캐릭터생성", L"image/ui/ui_newplayer.png", 1600, 600, 2, 1);
+		IMAGEMANAGER->addFrameImage("캐릭터생성2", L"image/ui/ui_brithday.png", 1660, 600, 2, 1);
+
 		IMAGEMANAGER->addImage("메인달력", L"image/ui/UI_common_calendar.png", 180, 100);
 		IMAGEMANAGER->addImage("메인스텟", L"image/ui/UI_common_state.png", 200, 218);
 		IMAGEMANAGER->addImage("메인메뉴", L"image/ui/ui_main_menu.png", 200, 120);
@@ -65,6 +68,11 @@ HRESULT playGround::init()
 			IMAGEMANAGER->addImage("텍스트박스_06", L"image/ui/UI_textbox_06.png", 18, 18);
 			IMAGEMANAGER->addImage("텍스트박스_07", L"image/ui/UI_textbox_07.png", 18, 18);
 			IMAGEMANAGER->addImage("텍스트박스_08", L"image/ui/UI_textbox_08.png", 18, 18);
+
+			//선택
+			IMAGEMANAGER->addImage("선택중", L"image/ui/UI_select.png", 168, 30);
+			IMAGEMANAGER->addImage("선택중2", L"image/ui/UI_select02.png", 98, 25);
+			IMAGEMANAGER->addImage("선택중3", L"image/ui/UI_select03.png", 168, 20);
 		}
 
 		// 02. 메인
@@ -75,12 +83,15 @@ HRESULT playGround::init()
 	}
 	// 캐릭터
 	{
-
+		//10살
+		IMAGEMANAGER->addFrameImage("10age_clothes", L"image/chara/10age/chara_10age_clothes.png", 331, 1181, 1, 4);
+		IMAGEMANAGER->addFrameImage("10age_face", L"image/chara/10age/chara_10age_face.png", 784, 524, 4, 4);
 	}
 	//============================================================================================= 씬 추가
 
 	{
-
+		SCENEMANAGER->addScene("startScene", new startScene);
+		SCENEMANAGER->addScene("newPlayer", new newPlayerScene);
 		SCENEMANAGER->addScene("main", new mainScene);
 
 	}
