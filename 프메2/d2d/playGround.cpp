@@ -20,8 +20,6 @@ HRESULT playGround::init()
 	{
 		//01. 배경
 		IMAGEMANAGER->addImage("메인배경", L"image/bg.png", 800, 600);
-		IMAGEMANAGER->addImage("메인달력", L"image/ui/UI_common_calendar.png", 180, 100);
-		IMAGEMANAGER->addImage("메인스텟", L"image/ui/UI_common_state.png", 200, 218);
 	}
 	//아이템
 	{
