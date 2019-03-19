@@ -17,7 +17,7 @@ HRESULT newPlayerScene::init()
 	_nState = NEW_FATHER_NAME_INPUT;
 
 	_isDataInput = true;
-	_isclear = false;
+
 	_clearBtn = { 175, 430, 235, 455 };
 	_returnBtn = { 270, 430, 330, 455 };
 	return S_OK;
@@ -29,24 +29,16 @@ void newPlayerScene::release()
 
 void newPlayerScene::update()
 {
-
-	if (_nState == NEW_FATHER_NAME_INPUT)
+	switch (_nState)
 	{
+	case NEW_FATHER_NAME_INPUT:
 		if (PtInD2D1Rect(_clearBtn, _ptMouse))
 		{
-			_isclear = true;
 			if (KEYMANAGER->isOnceKeyDown(VK_LBUTTON))
 			{
 				_nState = NEW_DAUGHTER_NAME_INPUT;
 			}
 		}
-	}
-
-	/*
-	switch (_nState)
-	{
-	case NEW_FATHER_NAME_INPUT:
-
 		break;
 	case NEW_DAUGHTER_NAME_INPUT:
 		break;
@@ -59,7 +51,6 @@ void newPlayerScene::update()
 	case NEW_DAUGTHER_BTYPE_SELECT:
 		break;
 	}
-	*/
 }
 
 void newPlayerScene::render()
@@ -82,17 +73,13 @@ void newPlayerScene::render()
 				str += *iter;
 			}
 			_fatherName = str;
-			D2DMANAGER->drawText(string2wstring(_fatherName).c_str(), 250, 305, 48, RGB(0, 0, 0));
+			D2DMANAGER->drawText( string2wstring( _fatherName).c_str(), 250, 305, 48, RGB(0, 0, 0));
 		}
 
-		D2DMANAGER->fillRectangle(RGB(255, 0, 255), _clearBtn);
 		swprintf_s(newplayer, L"완료");
 		D2DMANAGER->drawText(newplayer, 180, 430, 24);
 		swprintf_s(newplayer, L"뒤로");
 		D2DMANAGER->drawText(newplayer, 275, 430, 24);
-
-		swprintf_s(newplayer, L"%d" , _isclear);
-		D2DMANAGER->drawText(newplayer, 100, 430, 24);
 		break;
 	case NEW_DAUGHTER_NAME_INPUT:
 		IMAGEMANAGER->findImage("캐릭터생성")->frameRender(0, 0, 2, 0);

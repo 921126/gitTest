@@ -42,8 +42,6 @@ private:
 	D2D1_RECT_F _clearBtn;
 	D2D1_RECT_F _returnBtn;
 
-	bool _isclear;
-
 public:
 	newPlayerScene();
 	~newPlayerScene();
