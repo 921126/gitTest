@@ -22,10 +22,6 @@ HRESULT playGround::init()
 		IMAGEMANAGER->addImage("메인배경", L"image/bg.png", 800, 600);
 		IMAGEMANAGER->addImage("메인달력", L"image/ui/UI_common_calendar.png", 180, 100);
 		IMAGEMANAGER->addImage("메인스텟", L"image/ui/UI_common_state.png", 200, 218);
-		IMAGEMANAGER->addFrameImage("year", L"image/ui/ui_year.png", 40, 200, 1, 10);
-		IMAGEMANAGER->addFrameImage("mon", L"image/ui/ui_mon.png", 60, 240, 1, 12);
-		IMAGEMANAGER->addFrameImage("day", L"image/ui/ui_day.png", 80, 1550, 1, 31);
-		IMAGEMANAGER->addFrameImage("dayday", L"image/ui/ui_dayday.png", 60, 140, 1, 7);
 	}
 	//아이템
 	{

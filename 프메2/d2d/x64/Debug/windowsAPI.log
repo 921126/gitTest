@@ -1,3 +1,2 @@
 ﻿  mainScene.cpp
-c:\users\hayoung\desktop\gittest\프메2\d2d\mainscene.cpp(78): error C2369: 'str': 재정의. 첨자가 다릅니다.
-  c:\users\hayoung\desktop\gittest\프메2\d2d\mainscene.cpp(67): note: 'str' 선언을 참조하십시오.
+  windowsAPI.vcxproj -> C:\Users\hayoung\Desktop\프메2\d2d\x64\Debug\windowsAPI.exe
