@@ -95,7 +95,7 @@ HRESULT playGround::init()
 		SCENEMANAGER->addScene("main", new mainScene);
 
 	}
-	SCENEMANAGER->changeScene("newPlayer");
+	SCENEMANAGER->changeScene("main");
 	
 
 	
@@ -135,13 +135,13 @@ void playGround::render()
 	//				##카메라 정보 마우스 정보 시간정보 출력	##===================
 	WCHAR str[128];
 	swprintf_s(str, L"cameraX : %d", CAMERA->getPosX());
-	D2DMANAGER->drawText(str, CAMERA->getPosX(), CAMERA->getPosY() + 80);
+	D2DMANAGER->drawText(str, CAMERA->getPosX(), CAMERA->getPosY() + 80, 16, RGB(255,255,255));
 	swprintf_s(str, L"cameraY : %d", CAMERA->getPosY());
-	D2DMANAGER->drawText(str, CAMERA->getPosX(), CAMERA->getPosY() + 100);
+	D2DMANAGER->drawText(str, CAMERA->getPosX(), CAMERA->getPosY() + 100), 16, RGB(255, 255, 255);
 	swprintf_s(str, L"mouseX : %.2f", _ptMouse.x);
-	D2DMANAGER->drawText(str, CAMERA->getPosX(), CAMERA->getPosY() + 140);
+	D2DMANAGER->drawText(str, CAMERA->getPosX(), CAMERA->getPosY() + 140, 16, RGB(255, 255, 255));
 	swprintf_s(str, L"mouseY : %.2f", _ptMouse.y);
-	D2DMANAGER->drawText(str, CAMERA->getPosX(), CAMERA->getPosY() + 160);
+	D2DMANAGER->drawText(str, CAMERA->getPosX(), CAMERA->getPosY() + 160, 16, RGB(255, 255, 255));
 	TIMEMANAGER->render();
 	// Draw 끝 - 이 코드가 빠지면 D2D 출력 X
 	D2DMANAGER->endDraw();
