@@ -20,10 +20,7 @@ HRESULT playGround::init()
 	{
 		//01. 배경
 		IMAGEMANAGER->addImage("메인배경", L"image/bg.png", 800, 600);
-		IMAGEMANAGER->addFrameImage("캐릭터생성", L"image/ui/ui_newplayer.png", 1600, 600, 2, 1);
-		IMAGEMANAGER->addFrameImage("딸달력", L"image/ui/ui_daughter_calendar.png", 1600, 600, 2, 1);
-		IMAGEMANAGER->addFrameImage("아빠달력", L"image/ui/ui_father_calendar.png", 1600, 600, 2, 1);
-		IMAGEMANAGER->addImage("노란글씨", L"image/ui/yellowtxt.png", 800, 600);
+		IMAGEMANAGER->addFrameImage("캐릭터생성배경", L"image/ui/ui_newplayer_scene.png", 4800, 600, 6, 1);
 
 		IMAGEMANAGER->addImage("메인달력", L"image/ui/UI_common_calendar.png", 180, 100);
 		IMAGEMANAGER->addImage("메인스텟", L"image/ui/UI_common_state.png", 200, 218);
@@ -75,6 +72,7 @@ HRESULT playGround::init()
 			IMAGEMANAGER->addImage("선택중", L"image/ui/UI_select.png", 168, 30);
 			IMAGEMANAGER->addImage("선택중2", L"image/ui/UI_select02.png", 98, 25);
 			IMAGEMANAGER->addImage("선택중3", L"image/ui/UI_select03.png", 168, 20);
+			IMAGEMANAGER->addFrameImage("캐릭터생성선택", L"image/ui/ui_confirm.png", 78, 48, 2, 2);
 		}
 
 		// 02. 메인
@@ -85,6 +83,9 @@ HRESULT playGround::init()
 		//etc 캐릭터생성
 		{
 			IMAGEMANAGER->addFrameImage("딸생일선택", L"image/ui/ui_daughter_select.png", 20, 465, 1, 31);
+			IMAGEMANAGER->addFrameImage("아빠생일선택", L"image/ui/ui_father_select.png", 20, 465, 1, 31);
+			IMAGEMANAGER->addFrameImage("아빠나이선택", L"image/ui/ui_father_age_select.png", 10, 170, 1, 10);
+			IMAGEMANAGER->addFrameImage("딸혈액형", L"image/ui/ui_bloodtype_select.png", 20, 68, 1, 4);
 		}
 	}
 	// 캐릭터
