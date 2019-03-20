@@ -31,13 +31,12 @@ HRESULT newPlayerScene::init()
 
 	for (int i = 0; i < 4; ++i)
 	{
-		_bloodyType[0] = { 252, 349, 272, 366 };
-		_bloodyType[1] = { 331, 349, 351, 366 };
-		_bloodyType[2] = { 414, 349, 434, 366 };
-		_bloodyType[3] = { 501, 349, 521, 366 };
 		_isbtypeSelect[i] = false;
 	}
-
+	_bloodyType[0] = { 252, 349, 272, 366 };
+	_bloodyType[1] = { 331, 349, 351, 366 };
+	_bloodyType[2] = { 414, 349, 434, 366 };
+	_bloodyType[3] = { 501, 349, 521, 366 };
 
 	return S_OK;
 }
@@ -120,7 +119,66 @@ void newPlayerScene::update()
 				{
 					_bloodType = i;
 					_princessInfo.bloodType = (BLOOD_TYPE)_bloodType;
+					
+					tagInfo princessInfo;
+					
+					princessInfo.lastName = _princessInfo.lastName;
+					princessInfo.firstName = _princessInfo.firstName; 
+
+					princessInfo.bloodType = _princessInfo.bloodType;
+					princessInfo.year = _princessInfo.year;
+					princessInfo.mon = _princessInfo.mon;
+					princessInfo.day = _princessInfo.day;
+					//요일넣어야함
+
+					princessInfo.age = _princessInfo.age;
+					princessInfo.gold = 500;
+
+					princessInfo.height = RND->getFromIntTo(136, 152);
+					int base = princessInfo.height = 136;
+					princessInfo.weight = 29.20 + (base * 0.95);
+					princessInfo.bast = 67.50 + (base * 0.5);
+					princessInfo.waist = 47.51 + (base * 0.62);
+					princessInfo.hip = 70.72 + (base * 0.52);
+
+					princessInfo.foodStyle = PLAYER_FOODSTYLE::NOT_OVER;
+
+					if (princessInfo.mon == 12 || princessInfo.mon == 1 || princessInfo.mon == 2)
+					{
+						princessInfo.seaseonType = WINTER;
+					}
+					else if (princessInfo.mon == 3 || princessInfo.mon == 4 || princessInfo.mon == 5)
+					{
+						princessInfo.seaseonType = SPRING;
+					}
+					else if (princessInfo.mon == 6 || princessInfo.mon == 7 || princessInfo.mon == 8)
+					{
+						princessInfo.seaseonType = SUMMER;
+					}
+					else if (princessInfo.mon == 9 || princessInfo.mon == 10 || princessInfo.mon == 11)
+					{
+						princessInfo.seaseonType = AUTUMN;
+					}
+
+					if (princessInfo.mon == 1)
+					{
+						if (princessInfo.day == 2 || princessInfo.day == 9 || princessInfo.day == 16 || princessInfo.day == 23 || princessInfo.day == 30)
+						{
+							princessInfo.dayday = SUN;
+						}
+						if (princessInfo.day == 3 || princessInfo.day == 10 || princessInfo.day == 17 || princessInfo.day == 24 || princessInfo.day == 31)
+						{
+							princessInfo.dayday = MON;
+						}
+					}
+
+					SCENEMANAGER->changeScene("main");
+					
 				}
+			}
+			else
+			{
+				_isbtypeSelect[i] = false;
 			}
 		}
 		break;
@@ -169,7 +227,7 @@ void newPlayerScene::render()
 
 		for (int i = 0; i < 4; ++i)
 		{
-			if (_isbtypeSelect)
+			if (_isbtypeSelect[i])
 			{
 				IMAGEMANAGER->findImage("딸혈액형")->frameRender(_bloodyType[i].left, _bloodyType[i].top, 0, i);
 			}
@@ -1154,75 +1212,75 @@ void newPlayerScene::statusSetting()
 	{
 	case 1:
 		if (_princessInfo.day <= 19)
-			_princessStatus.Guardian.constellation = "염소자리", _princessStatus.Guardian.indexX = 0;
+			_princessStatus.Guardian.constellation = "염소자리";
 		else
-			_princessStatus.Guardian.constellation = "물병자리", _princessStatus.Guardian.indexX = 1;
+			_princessStatus.Guardian.constellation = "물병자리";
 		break;
 	case 2:
 		if (_princessInfo.day <= 18)
-			_princessStatus.Guardian.constellation = "물병자리", _princessStatus.Guardian.indexX = 1;
+			_princessStatus.Guardian.constellation = "물병자리";
 		else
-			_princessStatus.Guardian.constellation = "물고기자리", _princessStatus.Guardian.indexX = 2;
+			_princessStatus.Guardian.constellation = "물고기자리";
 		break;
 	case 3:
 		if (_princessInfo.day <= 20)
-			_princessStatus.Guardian.constellation = "물고기자리", _princessStatus.Guardian.indexX = 2;
+			_princessStatus.Guardian.constellation = "물고기자리";
 		else
-			_princessStatus.Guardian.constellation = "양자리", _princessStatus.Guardian.indexX = 3;
+			_princessStatus.Guardian.constellation = "양자리";
 		break;
 	case 4:
 		if (_princessInfo.day <= 19)
-			_princessStatus.Guardian.constellation = "양자리", _princessStatus.Guardian.indexX = 3;
+			_princessStatus.Guardian.constellation = "양자리";
 		else
-			_princessStatus.Guardian.constellation = "황소자리", _princessStatus.Guardian.indexX = 4;
+			_princessStatus.Guardian.constellation = "황소자리";
 		break;
 	case 5:
 		if (_princessInfo.day <= 20)
-			_princessStatus.Guardian.constellation = "황소자리", _princessStatus.Guardian.indexX = 4;
+			_princessStatus.Guardian.constellation = "황소자리";
 		else
-			_princessStatus.Guardian.constellation = "쌍둥이자리", _princessStatus.Guardian.indexX = 5;
+			_princessStatus.Guardian.constellation = "쌍둥이자리";
 		break;
 	case 6:
 		if (_princessInfo.day <= 21)
-			_princessStatus.Guardian.constellation = "쌍둥이자리", _princessStatus.Guardian.indexX = 5;
+			_princessStatus.Guardian.constellation = "쌍둥이자리";
 		else
-			_princessStatus.Guardian.constellation = "게자리", _princessStatus.Guardian.indexX = 6;
+			_princessStatus.Guardian.constellation = "게자리";
 		break;
 	case 7:
 		if (_princessInfo.day <= 22)
-			_princessStatus.Guardian.constellation = "게자리", _princessStatus.Guardian.indexX = 6;
+			_princessStatus.Guardian.constellation = "게자리";
 		else
-			_princessStatus.Guardian.constellation = "사자자리", _princessStatus.Guardian.indexX = 7;
+			_princessStatus.Guardian.constellation = "사자자리";
 		break;
 	case 8:
 		if (_princessInfo.day <= 22)
-			_princessStatus.Guardian.constellation = "사자자리", _princessStatus.Guardian.indexX = 7;
+			_princessStatus.Guardian.constellation = "사자자리";
 		else
-			_princessStatus.Guardian.constellation = "처녀자리", _princessStatus.Guardian.indexX = 5;
+			_princessStatus.Guardian.constellation = "처녀자리";
 		break;
 	case 9:
 		if (_princessInfo.day <= 22)
-			_princessStatus.Guardian.constellation = "처녀자리", _princessStatus.Guardian.indexX = 5;
+			_princessStatus.Guardian.constellation = "처녀자리";
 		else
-			_princessStatus.Guardian.constellation = "천칭자리", _princessStatus.Guardian.indexX = 4;
+			_princessStatus.Guardian.constellation = "천칭자리";
 		break;
 	case 10:
 		if (_princessInfo.day <= 23)
-			_princessStatus.Guardian.constellation = "천칭자리", _princessStatus.Guardian.indexX = 4;
+			_princessStatus.Guardian.constellation = "천칭자리";
 		else
-			_princessStatus.Guardian.constellation = "전갈자리", _princessStatus.Guardian.indexX = 8;
+			_princessStatus.Guardian.constellation = "전갈자리";
 		break;
 	case 11:
 		if (_princessInfo.day <= 22)
-			_princessStatus.Guardian.constellation = "전갈자리", _princessStatus.Guardian.indexX = 8;
+			_princessStatus.Guardian.constellation = "전갈자리";
 		else
-			_princessStatus.Guardian.constellation = "사수자리", _princessStatus.Guardian.indexX = 9;
+			_princessStatus.Guardian.constellation = "사수자리";
 		break;
 	case 12:
 		if (_princessInfo.day <= 21)
-			_princessStatus.Guardian.constellation = "사수자리", _princessStatus.Guardian.indexX = 9;
+			_princessStatus.Guardian.constellation = "사수자리";
 		else
-			_princessStatus.Guardian.constellation = "염소자리", _princessStatus.Guardian.indexX = 0;
+			_princessStatus.Guardian.constellation = "염소자리";
 		break;
 	}
 	vector<string> vStr = TXTDATA->txtLoadCsv("data/status.csv", _princessStatus.Guardian.constellation.c_str());
@@ -1566,4 +1624,9 @@ void newPlayerScene::BrithDayCalendarRender()
 			}
 		}
 	}
+}
+
+void newPlayerScene::dataSetting()
+{
+
 }

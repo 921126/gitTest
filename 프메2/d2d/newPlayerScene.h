@@ -1,6 +1,7 @@
 #pragma once
 #include "gameNode.h"
 #include "dataNode.h"
+#include "princess.h"
 
 enum NEWPLAYER_STATE
 {
@@ -11,8 +12,6 @@ enum NEWPLAYER_STATE
 	NEW_FATHER_BRIT_SELECT,
 	NEW_DAUGTHER_BTYPE_SELECT,
 };
-
-class princess;
 
 class newPlayerScene : public gameNode
 {
@@ -93,5 +92,10 @@ public:
 	void BrithDayCalendarSelect2();
 	void statusSetting();
 	void BrithDayCalendarRender();
+
+
+	void dataSetting();
+
+	void setPrincessAddressLink(princess* princessLink) { _princess = princessLink; }
 };
 

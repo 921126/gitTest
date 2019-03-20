@@ -1,9 +1,6 @@
 #pragma once
 #include "stdafx.h"
 
-#ifndef  _DATA_H_
-#define _DATA_H_
-
 //캐릭터 얼굴
 enum PRINCESS_FACE
 {
@@ -21,19 +18,12 @@ enum BLOOD_TYPE
 	BTYPE_O,
 	BTYPE_AB
 };
-//대사
-enum DIALOG_TYPE
+enum PLAYER_FOODSTYLE
 {
-	DIALOG_ING,
-	DIALOG_END
-};
-//스탯 상태
-enum STATUS_TYPE
-{
-	BEGINNING_STATUS,
-	STUDY_STATUS,
-	ING_STATUS,
-	END_STATUS,
+	NOT_OVER,
+	STRONG,
+	QUIET,
+	DIET
 };
 //계절상태
 enum SEASEON_TYPE
@@ -59,27 +49,8 @@ struct tagGuardianGod
 	string planet;			//수호 행성
 	string name;			//수호신 이름
 	string constellation;	//별자리
-	int indexX;				//이미지용 인덱스
 };
-//캐릭터 정보
-struct tagInfo
-{
-	string lastName;		//성
-	string firstName;		//이름
-	string strBloodType;	//혈액형글씨
-	string dietType;		//건강상태
-	
-	BLOOD_TYPE bloodType;	//혈액형
 
-	int year;				//년
-	int mon;				//월
-	int day;				//일
-	int dayday;				//요일
-
-	int age;				//나이
-	int gold;				//돈
-
-};
 //캐릭터 스텟
 struct tagStatus
 {
@@ -119,71 +90,39 @@ struct tagStatus
 	int total;
 	
 };
-//캐릭터 몸매 수치
-struct tagBodyStatus
+
+//캐릭터 정보
+struct tagInfo
 {
+	string lastName;		//성
+	string firstName;		//이름
+
+	BLOOD_TYPE bloodType;	//혈액형
+
+	int year;				//년
+	int mon;				//월
+	int day;				//일
+	DAYDAY dayday;			//요일
+
+	int age;				//나이
+	int gold;				//돈
+
 	float height;				//키
 	float weight;				//몸무게
 	float bast;					//가슴
 	float waist;				//허리
 	float hip;					//엉덩이
 
-	int clothesType;			//옷
-};
-//날짜처리
-struct tagDate
-{
-	string lastName;
-	string fristName;
-	PRINCESS_FACE faceType;
-
-	int year;		//년
-	int mon;		//월
-	int day;		//일
-	int dayday;		//요일
-};
-//스텟처리
-struct tagStatusData
-{
-	string fristName;	//이름
-	int start;
-	int end;
-	int pStart;
-	int pEnd;
-};
-//바캉스 처리
-struct tagVacation
-{
-	int sensitivity;
-	int stress;
-	
-	float weight;
+	tagStatus		status;
+	PRINCESS_FACE	faceType;
+	SEASEON_TYPE	seaseonType;
+	PLAYER_FOODSTYLE foodStyle;
 };
 
-//기타 처리용
-struct tagEtc
+enum class HOME_STATE
 {
-	D2D1_RECT_F rc;
-
-	int indeX, indexY;
-
-	bool isData;
-	bool isSelect;
-
+	IDLE,
+	SAVELOAD,
+	SAVE,
+	LOAD
 };
-struct tagEtc2
-{
-	string str;
-	D2D1_RECT_F rc;
-	bool isSelect;
-	bool isChoose;
-};
-struct tagImage
-{
-	image* img;
-	tagEtc2 data;
-	int x, y;
-	int frameX, frameY;
-};
-
-#endif // ! _DATA_H_

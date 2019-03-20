@@ -21,11 +21,6 @@ private:
 	int _day;
 	int _dayday;
 	int _lastDay;
-
-	tagImage _iyear;
-	tagImage _imon;
-	tagImage _iday;
-	tagImage _idayday;
 	//==================
 
 
@@ -38,7 +33,6 @@ public:
 	void update();
 	void render();
 
-
-	//void mainCalendarRender();	//달력그리기
+	void setPrincessAddressLink(princess* princessLink) { _princess = princessLink; }
 };
 
